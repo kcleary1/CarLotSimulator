@@ -36,6 +36,8 @@ namespace CarLotSimulator
 
             lot.CarList.Add(carOne);
 
+            CarLot.numberOfCars++;
+
             Console.WriteLine($"The first car is a {carOne.Year} {carOne.Make} {carOne.Model}. Its engine makes a {(carOne.MakeEngineNoise(carOne.EngineNoise))} sound, and its horn makes a {(carOne.MakeHonkNoise(carOne.HonkNoise))} noise. Its drivability is {carOne.IsDrivable}.");
 
             Car carTwo = new Car();
@@ -51,6 +53,8 @@ namespace CarLotSimulator
 
             lot.CarList.Add(carTwo);
 
+            CarLot.numberOfCars++;
+
             Console.WriteLine($"The second car is a {carTwo.Year} {carTwo.Make} {carTwo.Model}. Its engine makes a {carTwo.MakeEngineNoise(carTwo.EngineNoise)} sound, and its horn makes a {carTwo.MakeHonkNoise(carTwo.HonkNoise)} noise. Its drivability is {carTwo.IsDrivable}.");
 
             Car carThree = new Car();
@@ -63,6 +67,8 @@ namespace CarLotSimulator
 
             carThree.MakeEngineNoise(carThree.EngineNoise);
             carThree.MakeHonkNoise(carThree.HonkNoise);
+
+            CarLot.numberOfCars++;
 
             lot.CarList.Add(carThree);
 
@@ -78,6 +84,8 @@ namespace CarLotSimulator
 
             lot.CarList.Add(carFour);
 
+            CarLot.numberOfCars++;
+
             Console.WriteLine("Here is a list of all cars on the lot.");
             
             foreach (var car in lot.CarList)
@@ -91,6 +99,8 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+            Console.WriteLine($"The number of cars in the lot is {CarLot.numberOfCars} cars");
         }
     }
 }
